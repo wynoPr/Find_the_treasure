@@ -1,0 +1,146 @@
+@import "styles";
+
+body{
+    @include atributes(100vw,auto,0,0,0);
+    @include flex(column,center,center,0);
+    background-image: url(4x/Sea.png);
+    background-size: 7vw;
+    background-position:center;
+    overflow-x: hidden
+    
+}
+.header{
+    @include atributes(60vw,auto,0,0,0);
+    @include air('' , 0,'' , 2vw 0.5vw 5vw 0.5vw);
+    @include flex(column,flex-start,center,0);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-image: url('2x/fondo_2.png');
+    background-size: cover;
+    background-position: bottom;
+
+}
+.title_span{
+    color: #2D2A26;
+    font-size: 4vw;
+}
+.form{
+    width: 35vw;
+    @include air('' , 0w,'' , 1vw 0);
+    @include flex(row,center,center,wrap);
+    &_legend{
+        width: 100%;
+        @include flex(column,flex-start,center,0);
+    }
+    &_span{
+        color: #2D2A26;
+        font-family: 'pixel';
+        font-size: 2vw;
+    }
+}
+.inputs{
+    @include atributes(6vw,3vw,0,0, #ffffff00);
+    text-align: center;
+    font-size: 3vw;
+    border-bottom: #3F7ABE solid 0.2vw;
+    color: #2D2A26;
+}
+.submit{
+    @include atributes(auto,auto,0,0, #3F7ABE);
+    @include air('' , 0 2vw,'' , 0.7vw 1vw 0.4vw 1vw);
+    @include flex(row,center,center,0);
+    border-radius: 1vw;
+    font-size: 2vw;
+    color: #a2c1f6;
+    color: #ECDB8E;
+
+
+}
+
+.contain{
+    @include atributes(100vw,80vh,0,0,0);
+    @include air(-top , 0vh,'' , 0);
+    @include flex(column,center,center,0);
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-indent: 0;
+    font-size:0;
+}
+.cell{
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size:0;
+}
+.img{
+    width: 4vw;
+    height: 4vw;
+    font-size:0;
+    background-size: cover;
+}
+
+.animation_no {
+    animation-name: animation_no;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes animation_no {
+    0% {
+        background-image: url('4x/chest_1.png');
+    }
+    20% {
+        background-image: url('4x/chest_2.png');
+    }
+    40% {
+        background-image: url('4x/chest_3.png');
+    }
+    60% {
+        background-image: url('4x/chest_4.png');
+    }
+    80% {
+        background-image: url('4x/chest_5_1.png');
+    }
+    100% {
+        background-image: url('4x/chest_6_1.png');
+    }
+}
+
+.animation_ye {
+    animation-name: animation_ye;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes animation_ye {
+    0% {
+        background-image: url('4x/chest_1.png');
+    }
+    20% {
+        background-image: url('4x/chest_2.png');
+    }
+    40% {
+        background-image: url('4x/chest_3.png');
+    }
+    60% {
+        background-image: url('4x/chest_4.png');
+    }
+    80% {
+        background-image: url('4x/chest_5_2.png');
+    }
+    100% {
+        background-image: url('4x/chest_6_2.png');
+    }
+}
+
+.congrats{
+    position: absolute;
+    z-index: 8;
+    background-image: url('2x/fondo_2.png');
+    background-size: cover;
+    width: 40vw;
+    aspect-ratio: 1.355;
+    @include air('' , 0,'' , 3vw);
+    @include flex(column,center,center,0);
+}
